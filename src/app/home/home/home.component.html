@@ -1,0 +1,31 @@
+<p>Welcome to App</p>
+
+
+<div class="container">
+    <div *ngFor="let i of productList" class="cards">
+        <div class="card-wrapper">
+            <mat-card class="example-card">
+                <mat-card-header>
+                <img mat-card-image src= {{i.image}} mat-card-avatar>
+                <mat-card-title>{{i.title}}}</mat-card-title>
+                <mat-card-subtitle>
+                    {{i.category |uppercase}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image class="card-image" src={{i.image}} alt="Angular logo">
+                <mat-card-content>
+                  <p>
+                {{i.description}}
+                  </p>
+                  <p>
+                    {{i.price | currency}}
+                </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-raised-button color="accent" (click) = "onBuyNow(i)">BUY NOW</button>
+                  <button mat-raised-button color="accent" (click) = "Addtocart(i)">ADD TO CART</button>
+                </mat-card-actions>
+              </mat-card>
+        </div>
+    </div>
+</div>

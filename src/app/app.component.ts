@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild } from '@angular/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'shop-app';
+  
+  @ViewChild('side-nav') sideNav!:MatSidenavModule;
+
+  constructor(){}
+
+  clickHandler()
+  {
+  
+  }
 }
